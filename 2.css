@@ -1,0 +1,234 @@
+a{
+    color:#323232;
+    text-decoration: none;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+.shareUrl{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-width: 744px;
+    min-height:700px ;
+    background: linear-gradient(225deg,rgba(255,235,109,1) 0%,rgba(255,206,123,1) 100%);
+    overflow:hidden;
+}
+
+.shareContent{
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    width: 744px;
+    z-index:2;
+    overflow: hidden;
+}
+
+.shareUrl .shareContent .shareContentLeft{
+    position: relative;
+    float: left;
+    height: 692px;
+    width: 372px;
+    background-image: url(https://s.tuguaishou.com/image/editorH5/previewPanelBG-small.png);
+}
+.shareUrl .shareContent .shareContentLeft .shareContentWrapper{
+    width: 340px;
+    height: 548px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: pink;
+    overflow: hidden;
+}
+
+.shareUrl .shareContent .shareContentLeft .buttonPage{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -42px;
+}
+.shareUrl .shareContent .shareContentLeft .buttonPage .pageTurnBtn{
+    width: 42px;
+    text-align: center;
+    height: 120px;
+    background:rgba(235,235,235,1);
+    border-radius:0px 7px 7px 0px;
+    font-size:14px;
+    color:rgba(102,102,102,1);
+    box-sizing: border-box;
+    padding: 30px 0;
+    line-height:20px;
+    cursor: pointer;
+}
+.shareUrl .shareContent .shareContentLeft .buttonPage .pageTurnBtn.pageUpBtn{
+    margin-bottom: 22px;
+}
+
+
+
+.shareUrl .shareContent .shareContentRight{
+    float: right;
+    width: 277px;
+    margin-left: 53px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.shareUrl .shareContent .shareContentRight .contentRightTop{
+    width:277px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+    border-radius:8px;
+    box-sizing: border-box;
+    padding: 24px 28px;
+    overflow: hidden;
+}
+.shareContentRight .contentRightTop .contentTitle{
+    font-size: 18px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    color:rgba(32,32,32,1);
+}
+.shareContentRight .contentRightTop .contentUnderLine{
+    width: 200%;
+    position: relative;
+    margin: 16px 0;
+    left: -50%;
+    height:1px;
+    background:rgba(216,216,216,1);
+}
+.shareContentRight .contentRightTop .contentQrCode{
+    color:rgba(102,102,102,1);
+}
+.shareContentRight .contentRightTop .contentQrCode .codeContent{
+    width: 217px;
+    height: 217px;
+    box-sizing: border-box;
+    padding: 10px;
+    border:1px solid rgba(204,204,204,1);
+    margin: 10px 0 22px;
+}
+.shareContentRight .contentRightTop .contentQrCode .codeContent img{
+    width: 100%;
+    height: 100%;
+}
+.shareContentRight .contentRightTop .contentShare{
+    font-size:14px;
+    font-family:PingFangSC-Regular,PingFang SC;
+    color:rgba(102,102,102,1);
+}
+.shareContentRight .contentRightTop .contentShare .bdsharebuttonbox{
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: -50%;
+}
+.shareContentRight .contentRightTop .contentShare .bdsharebuttonbox a{
+    margin-left: 10px;
+}
+.shareContentRight .contentRightTop .contentShare a{
+    vertical-align: -15%;
+    margin-left: 4px;
+}
+.shareContentRight .contentRightTop .contentShare a i{
+    font-size: 18px;
+}
+
+.shareUrl .shareContent .shareContentRight .contentRightBottom{
+    margin-top: 20px;
+    width:277px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 8px 0px rgba(0,0,0,0.1);
+    border-radius:8px;
+    box-sizing: border-box;
+    padding: 31px 38px;
+}
+.shareUrl .shareContent .shareContentRight .contentRightBottom>div,
+.shareUrl .shareContent .shareContentRight .contentRightBottom>a{
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+    background: #FF787E;
+    border:1px solid rgba(255,120,126,1);
+    border-radius:4px;
+    cursor: pointer;
+    display: block;
+}
+
+.shareUrl .shareContent .shareContentRight .contentRightBottom .toEditorH5Edit{
+    color: #FF787E;
+    background: #fff;
+    margin-bottom: 22px;
+}
+.footer {
+    display: none;
+}
+#sidebar {
+    display: none;
+}
+.mask {
+    display: block;
+    position: absolute;
+    background:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.mask_content {
+    width:218px;
+    height:180px;
+    font-size:24px;
+    color:rgba(255,255,255,1);
+    margin:175px auto 0px;
+    text-align: center;
+}
+.mask_span {
+    font-size:15px;
+    margin-top: 30px;
+    line-height: 40px;
+    display: block;
+}
+
+.bubble{
+    background:rgba(255, 255, 255, 0.15);
+    box-shadow:0px 11px 38px 0px rgba(255, 193, 38, 0.22);
+    position:absolute;
+    border-radius:50%;
+    z-index:1;
+}
+.bubble.bubble1{
+    width:394px;
+    height:394px;
+    left:-107px;
+    top:0px;
+}
+.bubble.bubble2{
+    width:94px;
+    height:94px;
+    top:98px;
+    right:0px;
+}
+.bubble.bubble3{
+    width:108px;
+    height:108px;
+    left:200px;
+    top:600px;
+}
+.bubble.bubble4{
+    width:1836px;
+    height:1836px;
+    bottom:-1693px;
+    left:0px;
+}
+.bubble.bubble5{
+    width:200px;
+    height:200px;
+    top:498px;
+    right:30px;
+}

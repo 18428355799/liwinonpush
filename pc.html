@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>入职周年</title>
+		<meta name="viewport" id="viewport" content="width=100%,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<style>
+			.className {
+				-webkit-animation: twinkling 500ms infinite ease-in-out
+			}
+
+			.animated {
+				-webkit-animation-duration: 500ms;
+				animation-duration: 500ms;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both
+			}
+
+			@-webkit-keyframes twinkling {
+				100% {
+					opacity: 0;
+				}
+
+				0% {
+					opacity: 1;
+				}
+			}
+
+			@keyframes twinkling {
+				100% {
+					opacity: 0;
+				}
+
+				0% {
+					opacity: 1;
+				}
+			}
+
+			.imga {
+				transform: rotate3d(0, 1, 0, 360deg);
+			}
+		</style>
+	</head>
+	<body style="background-color: #f2f3f5;font-family: 楷体;">
+	<div style="display: flex;align-items: center; justify-content:center;margin-top: 5%;">
+			<div style="position:absolute;top:0px;">
+				<img src="https://mesqrcode.liwinon.com/mainApp/img/nian/15.png" style="width: 100%;height: 100%;">
+			</div>
+			<div class="className">
+				<img src="https://mesqrcode.liwinon.com/mainApp/img/nian/33.png">
+			</div>
+			<div  id="imga"  style="position: absolute;">
+				<img  src="https://mesqrcode.liwinon.com/mainApp/img/nian/6.png" 
+				style="width: 190px;height: 190px;">
+			</div>
+			<div style="line-height: 1.5; letter-spacing: 2px; 
+			 color: rgb(201, 181, 138); opacity: 1; position: absolute; 
+			  top: 10%;">
+				<div style="margin-left: -30px;">亲爱的某某：<samp id="name"></samp></div>
+				<div>今天是你加入</div>
+				<div>锂威大家庭的第<samp id="nian">2</samp>年</div>
+				<div>从陌生到熟悉，从彷徨到笃定</div>
+				<div>过去的点滴在脑海里回放</div>
+				<div>那些我们携手拼搏的激情</div>
+				<div>那些我们一起欢声笑语的快乐</div>
+				<div>接下来的日子</div>
+				<div>让我们携手并进</div>
+				<div>一起成长，一起闪耀！</div>
+			</div>
+		</div>
+		<audio src="https://mesqrcode.liwinon.com/mainApp/img/nian/ruzhi.mp3" autoplay="autoplay" loop="loop" />
+		<script type="text/javascript" src="https://mesqrcode.liwinon.com/mainApp/js/jquery-3.4.0.min.js"></script>
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				var w=document.body.clientWidth || document.documentElement.clientWidth;
+				wleft(w);
+				console.log(w+"===宽度=====");
+				var a=document.body.clientHeight || document.documentElement.clientHeight;
+				console.log(a+"===高度=====");
+			    window.addEventListener('resize', function() {
+					var w=document.body.clientWidth || document.documentElement.clientWidth;
+					wleft(w);
+					console.log(w+"===宽度=====");
+					var a=document.body.clientHeight || document.documentElement.clientHeight;
+					console.log(a+"===高度=====");
+			    })
+			})
+			function wleft(pk){
+				var sk = pk-190;
+				document.getElementById("imga").style.left =sk/2+"px";
+			}
+			$(function() {
+				var imgs = document.getElementById("imga").getElementsByTagName("img"); //图片集合;
+				var allEnd = 0; //用来判断所有的图片是否都完成了所有的运动步骤
+				var on = true; //用来决定用户是否可以再次点击
+				toBig();
+				//第三个运动效果
+				function toBig() {
+					/*
+					 *坐标轴，x,y,z
+					 */
+					for (var i = 0; i < imgs.length; i++) {
+						imgs[i].style.transition = '';
+						// imgs[i].style.opacity='1';
+						//想要一个物体有css3中的动作变化，那就需要给它一个初始值
+						imgs[i].style.transform = 'rotateY(0deg) translateZ(-' + Math.random() * 100 + 'px)';
+						//自执行函数的目的是，为了找到i，否则for循环执行太快，会找不到i
+						(function(i) {
+							setTimeout(function() {
+								montion(imgs[i], '2s', function() {
+									this.style.opacity = 1;
+									this.style.transform = 'rotateY(-360deg) translateZ(0)'
+								}, function() {
+									allEnd++;
+									if (allEnd === imgs.length) {
+										console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
+										//这个条件成立，说明所有的图片都运动完了，接下来才允许再次点击
+										//当所有运动完了以后，才允许再次点击
+										on = true;
+										allEnd = 0;
+									}
+								});
+							}, Math.random() * 1000);
+						})(i);
+					}
+					for (var i = 0; i < imgs.length; i++) {
+						imgs[i].style.transition = '';
+						// imgs[i].style.opacity='1';
+						//想要一个物体有css3中的动作变化，那就需要给它一个初始值
+						imgs[i].style.transform = 'rotateY(0deg) translateZ(-' + Math.random() * 100 + 'px)';
+						//自执行函数的目的是，为了找到i，否则for循环执行太快，会找不到i
+						(function(i) {
+							setTimeout(function() {
+								montion(imgs[i], '2s', function() {
+									this.style.opacity = 1;
+									this.style.transform = 'rotateY(360deg) translateZ(0)'
+								}, function() {
+									allEnd++;
+									if (allEnd === imgs.length) {
+										console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
+										//这个条件成立，说明所有的图片都运动完了，接下来才允许再次点击
+										//当所有运动完了以后，才允许再次点击
+										on = true;
+										allEnd = 0;
+									}
+								});
+							}, Math.random() * 1000);
+						})(i);
+					}
+				}
+				//运动函数(运动的对象，运动的时间，运动的属性函数，运动完成后要做的事情)
+				function montion(obj, time, doFn, callBack) {
+					obj.style.transition = time;
+					doFn.call(obj); //调用函数，并且把this的指向给obj
+
+					var called = false; //这里的原因是为了解决transitionend调用多次的bug
+
+					obj.addEventListener('transitionend', function() {
+						if (!called) {
+							callBack && callBack.call(obj); //解决如果没有传入第四个callBack参数的问题
+							called = true;
+						}
+
+					}, false); //事件三阶段，第三个参数决定是在捕获阶段还是冒泡阶段，调用此函数,false代表是在冒泡阶段
+				}
+			});
+		</script>
+	</body>
+</html>

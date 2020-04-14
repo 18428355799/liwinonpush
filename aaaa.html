@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试滑动</title>
+    <style>
+	    .div2{
+	        height: 400px;
+	        background: #0099CC;
+	        position: absolute;
+	        left: 0;
+	        bottom: 0;
+	    }
+	    .mask{
+	        width: 200px;
+	        height: 400px; /* 高度是变量 */
+	        position: absolute;
+	        left: 0;
+	        top: 0; /* top是变量 */
+	    }
+		.mask{
+		     animation: animate 3s ease infinite;
+			 animation-iteration-count: 1;
+		     overflow: hidden;
+		}
+		@keyframes animate{
+		    from {
+		        height: 0px;
+		        top : 400px;
+		    }
+		    to {
+		        height: 400px;
+		        top : 0px;
+		    }
+		}
+	</style>
+
+</head>
+<body>
+    <div class="mask">
+        <div class="div2">我是div顶部</div>
+    </div>
+
+</body>
+</html>

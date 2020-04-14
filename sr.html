@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<link href="https://mesqrcode.liwinon.com/mainApp/img/z.ico" rel="SHORTCUT ICON">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>生日快乐</title>
+		<!-- <link href="https://mesqrcode.liwinon.com/mainApp/css/userbirthday.css" rel="stylesheet" type="text/css"> -->
+	</head>
+	<body style="display: flex;align-items: center; justify-content:center;">
+		<div class="image_2" style="position:absolute;top: 0%;width: 100%; height: 100%;" >
+			<img alt="image" src="https://mesqrcode.liwinon.com/mainApp/img/sr/ditu.png" style="width: 100%; height: 100%;">
+		</div>
+		<div class="image_4" style="width: 100%; height: 100%; position: absolute;top: 4%;">
+			<img class="shuquan" alt="image" src="https://mesqrcode.liwinon.com/mainApp/img/sr/shuqian.png"  style="width: 100%; height: 99%;">
+		</div>
+		<div id="lazhu" style="position: absolute; top: 18%;"> 
+			<img class="lazhuimg" alt="image" src="https://mesqrcode.liwinon.com/mainApp/img/sr/lazhu.png" style="width: 100px;">
+		</div>
+		<div class="image_3" style="position:absolute;top: 0%;width: 100%; height: 100%;">
+			<img alt="image" src="https://mesqrcode.liwinon.com/mainApp/img/sr/x3.png" style="width: 100%; height: 100%;">
+		</div>
+		<div class="image_4 ziti" style="font-size: 15px; line-height: 1.6;color: rgb(74, 74, 74); position: absolute;top: 38%;">
+			<div>嘿！严先亿：</div>
+			<div>一张贺卡，一份祝福</div>
+			<div>祝你生日快乐</div>
+			<div>工作之余不要忘了自己的身体</div>
+			<div>感谢你在公司的出色表现</div>
+			<div>愿你与公司走过每个春夏秋冬</div>
+			<div>携手共创更多美好明天</div>
+			<div>生日快乐</div>
+		</div>
+		<audio src="https://mesqrcode.liwinon.com/mainApp/img/sr/sr.mp3" autoplay="autoplay" loop="loop" />
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				var wl = document.body.clientWidth || document.documentElement.clientWidth;
+				wleft(wl);
+				var a = document.body.clientHeight || document.documentElement.clientHeight;
+				window.addEventListener('resize', function() {
+					var wl = document.body.clientWidth || document.documentElement.clientWidth;
+					wleft(wl);
+					var a = document.body.clientHeight || document.documentElement.clientHeight;
+				})
+			})
+
+			function wleft(wl) {
+				//	document.getElementById("lazhu").style.left =(wl-130)/2+"px";
+			}
+		</script>
+		<style>
+			 .ziti{
+			    font-family:"楷体";
+			}
+			.shuquan {
+			    position: absolute;
+			}
+			
+			.image_4 {
+			    position: absolute;
+			}
+			
+			.image_4 {
+			    animation: animate 2.5s ease 1; //设置3秒做完上划动作,做一次
+			}
+			
+			@keyframes animate {
+			    from {
+			        height: 75%;
+			        top: 70%;
+			    }
+				/* to {
+				        height: 400px;
+				} */
+			}
+			
+			@-webkit-keyframes fadeIn {
+			    0% {
+			        opacity: 0;
+			        /*初始状态 透明度为0*/
+			    }
+			
+			    50% {
+			        opacity: 0;
+			        /*中间状态 透明度为0*/
+			    }
+			
+			    100% {
+			        opacity: 1;
+			        /*结尾状态 透明度为1*/
+			    }
+			}
+			.lazhuimg {
+			    -webkit-animation-name: fadeIn;
+			    /*动画名称*/
+			    -webkit-animation-duration: 3.2s;
+			    /*动画持续时间*/
+			    -webkit-animation-iteration-count: 1;
+			    /*动画次数*/
+			    -webkit-animation-delay: 0s;
+			    /*延迟时间*/
+			}
+		</style>
+	</body>
+</html>
