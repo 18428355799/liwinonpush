@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">
+			[uib-typeahead-popup].dropdown-menu {
+				display: block;
+			}
+		</style>
+		<style type="text/css">
+			.uib-time input {
+				width: 50px;
+			}
+		</style>
+		<style type="text/css">
+			.uib-datepicker .uib-title {
+				width: 100%;
+			}
+
+			.uib-day button,
+			.uib-month button,
+			.uib-year button {
+				min-width: 100%;
+			}
+
+			.uib-datepicker-popup.dropdown-menu {
+				display: block;
+			}
+
+			.uib-button-bar {
+				padding: 10px 9px 2px;
+			}
+		</style>
+		<style type="text/css">
+			.ng-animate.item:not(.left):not(.right) {
+				-webkit-transition: 0s ease-in-out left;
+				transition: 0s ease-in-out left
+			}
+		</style>
+		<style type="text/css">
+			@charset "UTF-8";
+
+			[ng\:cloak],
+			[ng-cloak],
+			[data-ng-cloak],
+			[x-ng-cloak],
+			.ng-cloak,
+			.x-ng-cloak,
+			.ng-hide:not(.ng-hide-animate) {
+				display: none !important;
+			}
+
+			ng\:form {
+				display: block;
+			}
+
+			.ng-animate-shim {
+				visibility: hidden;
+			}
+
+			.ng-anchor {
+				position: absolute;
+			}
+		</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta http-equiv="x-rim-auto-match" content="none">
+		<meta id="metaDescription" name="description" content="">
+		<meta itemprop="name" content="周年快乐">
+		<meta itemprop="image" content="nian02/zhuan.png?x-oss-process=style/xm">
+		<meta name="description" itemprop="description" content="">
+		<script>
+			(function (window, document, navigator) {
+var doc = document.documentElement;
+doc.setAttribute('data-useragent', navigator.userAgent)
+})(window, window.document, window.navigator);
+</script>
+		<script>
+			(function (window, document, navigator) {
+var doc = document.documentElement;
+var d = new Date();
+var localDateTxt = '' + d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+doc.setAttribute('data-localdate', localDateTxt);
+})(window, window.document, window.navigator);
+</script>
+		<title>周年快乐</title>
+		<link rel="stylesheet" href="nian02/72cb31.booklet.min.css">
+		<style type="text/css">
+			.adslot-1 {
+				width: 375px;
+				height: 478.55px;
+			}
+
+			@media (min-width: 423px) {
+				.adslot-1 {
+					width: 425px;
+					height: 542px;
+				}
+			}
+		</style>
+	</head>
+	<body class="tn-transition-end tn-platform-class tn-prevent-unlink-img-click light-mode ng-scope tn-platform-desktop"
+	 ng-controller="BookletRootReaderController" style="font-size: 18px;">
+		<!-- <div class="reader-booklet-container" tn-distortion-page-for-keyboard-in-android="true">
+			<div class="tn-reader-booklet ng-scope" tn-opera-house="" tn-atom-context="{ type: &#39;booklet&#39;, inReader: true }"
+			 ng-controller="BookletReaderController" style="touch-action: none; user-select: none; -webkit-user-drag: none; 
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+				<article class="tn-cube-box booklet dock-loader ng-scope tn-comp-anim-pin tn-comp-inst tn-cube-box-inst tn-comp 
+tn-in-cell-state-active tn-from-house-reader_booklet-cp"
+				 tn-bind-comp-tpl-id="reader_booklet-cp:sys/loader-cubes-box" tn-comp-role="cube-box" tn-comp="box" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose"
+				 tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)" opera-tn-ra-comp="box" style="">
+					<section class="tn-comp-pin tn-comp-style-pin ng-scope" ng-include="compTemplatePath" tn-link="compAttr.link || comp.link"
+					 tn-sound="compAttr.sound" ng-style="compAttr.style | optimizeImageType" tn-pre-load-image="compAttr.style.backgroundImage"
+					 style="">
+						<div class="tn-cube-slot tn-view-cubes ng-scope tn-cell-inst tn-cell tn-cell-group tn-child-position-absolute 
+tn-state-active tn-cube-flipper-box"
+						 tn-cell-type="group" tn-cell="cubes" tn-link="cell.link" ng-style="cell.style | optimizeImageType" tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)"
+						 tn-animate-on-self="true" tn-sound="cell.sound" ng-class="{ &#39;group-empty&#39;: !(cellGroupItems.length) }"
+						 opera-tn-ra-cell="box.cubes">
+							
+							<div class="tn-surface tn-cube tn-show-cube ng-scope tn-comp-anim-pin tn-comp-inst tn-cube-inst tn-comp 
+tn-in-cell-state-active tn-from-house-reader_booklet-cp on-screen"
+							 tn-comp-role="cube" tn-bind-comp-tpl-id="reader_booklet-cp:sys/cube-fs" ng-repeat="chd in cellGroupItems track by $index"
+							 tn-comp="chd" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+							 tn-comp-index="0" opera-tn-ra-comp="box.cubes:0" style="">
+								
+								<section class="tn-comp-pin tn-comp-style-pin ng-scope" ng-include="compTemplatePath" tn-link="compAttr.link || comp.link"
+								 tn-sound="compAttr.sound" ng-style="compAttr.style | optimizeImageType" tn-pre-load-image="compAttr.style.backgroundImage"
+								 style="background-image: url(nian02/bei1.jpg?x-oss-process=style/xm);
+								 background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; background-attachment:
+								 scroll;">
+									<div class="tn-layer-slot ng-scope tn-cell-inst tn-cell tn-cell-group tn-child-position-absolute tn-state-active"
+									 tn-cell-type="group" tn-bind-cell="layers" tn-cell="layers" tn-link="cell.link" ng-style="cell.style | optimizeImageType"
+									 tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)" tn-animate-on-self="true" tn-sound="cell.sound"
+									 ng-class="{ &#39;group-empty&#39;: !(cellGroupItems.length) }" opera-tn-ra-cell="box.cubes:0.grounds:0.layers">
+										
+										<div class="tn-layer ng-scope tn-comp-anim-pin tn-comp-inst tn-layer-inst tn-comp tn-in-cell-state-active
+ tn-from-house-reader_booklet-cp"
+										 tn-comp-role="layer" tn-bind-comp-tpl-id="reader_booklet-cp:sys/ly-fs" ng-repeat="chd in cellGroupItems track by $index"
+										 tn-comp="chd" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+										 tn-comp-index="0" opera-tn-ra-comp="box.cubes:0.grounds:0.layers:0" style="width: 100%; height: 90.13639%; top:8.2145%">
+											
+											<section class="tn-comp-pin tn-comp-style-pin ng-scope" ng-include="compTemplatePath" tn-link="compAttr.link || comp.link"
+											 tn-sound="compAttr.sound" ng-style="compAttr.style | optimizeImageType" tn-pre-load-image="compAttr.style.backgroundImage"
+											 style="">
+												<div class="tn-comp-slot tn-cell tn-cell-group tn-child-position-absolute tn-state-active ng-scope"
+												 tn-cell-type="group" tn-link="cell.link" tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)"
+												 tn-animate-on-self="true" tn-sound="cell.sound" tn-ra-wrapper-cell="" tn-ra-cell="box.cubes:0.grounds:0.layers:0.comps">
+													<div id="zhuandi" class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope"
+													 tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+													 style="position: absolute;
+													 width: 110.133%;left: -4.5333%;
+													 " tn-ra-comp="box.cubes:0.grounds:0.layers:0.comps:0">
+														<section class="tn-comp-pin tn-comp-style-pin" tn-link="compAttr.link || comp.link" tn-sound="compAttr.sound"
+														 tn-pre-load-image="compAttr.style.backgroundImage">
+															<div tn-cell-type="crop-image" style="width: 100%; height: 100%; background-position: center center;
+ background-repeat: no-repeat; background-size: cover;
+  background-image: url(nian02/bei2.png?x-oss-process=style/xm); 
+  animation-name: ent_pullDownIn; animation-duration: 1.5s; animation-timing-function: ease-in-out; animation-delay: 0s; 
+  animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: both;"
+															 class="tn-cell tn-cell-crop-image tn-child-position-absolute tn-state-active ng-scope tn-animate-set tn-animate-started"
+															 tn-link="cell.link" tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)"
+															 tn-animate-on-self="true" tn-sound="cell.sound" tn-pre-load-image="cell.src" title="" tn-ra-cell="box.cubes:0.grounds:0.layers:0.comps:0.cimg1">
+																<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; vertical-align: middle; max-width: 100%;">
+																	<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%; opacity: 0;" src="nian02/bei2.png">
+																</div>
+															</div>
+														</section>
+													</div>
+												</div>
+										</div>
+									</div> 
+								</section>
+							</div>
+						</div>
+					</section>
+				</article>
+			</div>
+		</div> -->
+		<div class="dock booklet tn-page-slot tn-view-pages ng-scope tn-cell-inst tn-cell tn-cell-group tn-child-position-absolute 
+	tn-state-active tn-vertical-flipper-box"
+		 tn-cell-type="group" tn-bind-cell="pages" tn-cell="pages" tn-link="cell.link" ng-style="cell.style | optimizeImageType"
+		 tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)" tn-animate-on-self="true" tn-sound="cell.sound"
+		 ng-class="{ &#39;group-empty&#39;: !(cellGroupItems.length) }" opera-tn-ra-cell="box.cubes:0.pages">
+			<div class="tn-surface tn-page tn-show-page ng-scope tn-comp-anim-pin tn-comp-inst tn-page-inst tn-comp 
+	tn-in-cell-state-active tn-comp-mode-board tn-from-house-reader_booklet-cp on-screen"
+			 tn-comp-role="page" tn-bind-comp-tpl-id="reader_booklet-cp:sys/pg-fs" ng-repeat="chd in cellGroupItems track by $index"
+			 tn-comp="chd" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+			 tn-comp-index="0" opera-tn-ra-comp="box.cubes:0.pages:0" style="">
+				<section class="tn-comp-pin tn-comp-style-pin ng-scope" ng-include="compTemplatePath" tn-link="compAttr.link || comp.link"
+				 tn-sound="compAttr.sound" ng-style="compAttr.style | optimizeImageType" tn-pre-load-image="compAttr.style.backgroundImage"
+				 style="background-color: transparent; background-attachment: scroll;">
+					<div class="tn-layer-slot ng-scope tn-cell-inst tn-cell tn-cell-group tn-child-position-absolute tn-state-active"
+					 tn-cell-type="group" tn-bind-cell="layers" tn-cell="layers" tn-link="cell.link" ng-style="cell.style | optimizeImageType"
+					 tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)" tn-animate-on-self="true" tn-sound="cell.sound"
+					 ng-class="{ &#39;group-empty&#39;: !(cellGroupItems.length) }" opera-tn-ra-cell="box.cubes:0.pages:0.layers">
+						<div class="tn-layer ng-scope tn-comp-anim-pin tn-comp-inst tn-layer-inst tn-comp tn-in-cell-state-active 
+	tn-from-house-reader_booklet-cp"
+						 tn-comp-role="layer" tn-bind-comp-tpl-id="reader_booklet-cp:sys/ly-fs" ng-repeat="chd in cellGroupItems track by $index"
+						 tn-comp="chd" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+						 tn-comp-index="0" opera-tn-ra-comp="box.cubes:0.pages:0.layers:0" style="width: 424.956px; height: 638px; left: 0.0222025px;">
+							<section class="tn-comp-pin tn-comp-style-pin ng-scope" ng-include="compTemplatePath" tn-link="compAttr.link || comp.link"
+							 tn-sound="compAttr.sound" ng-style="compAttr.style | optimizeImageType" tn-pre-load-image="compAttr.style.backgroundImage"
+							 style="">
+								<div class="tn-comp-slot tn-cell tn-cell-group tn-child-position-absolute tn-state-active ng-scope"
+								 tn-cell-type="group" tn-link="cell.link" tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)"
+								 tn-animate-on-self="true" tn-sound="cell.sound" tn-ra-wrapper-cell="" tn-ra-cell="box.cubes:0.pages:0.layers:0.comps">
+									<div class="image_2" style="position:absolute;top: 0%;width: 100%; height: 100%;">
+										<img alt="image" src="nian02/bei1.jpg" style="width: 100%; height: 100%;">
+									</div>
+									<div id="zhuandi" class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope"
+									 tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? &#39;__NOT_MOUNT__&#39; : compAttr.anim)"
+									 style="position: absolute;
+									 width: 110.133%;left: -4.5333%;
+									 " tn-ra-comp="box.cubes:0.grounds:0.layers:0.comps:0">
+										<section class="tn-comp-pin tn-comp-style-pin" tn-link="compAttr.link || comp.link" tn-sound="compAttr.sound"
+										 tn-pre-load-image="compAttr.style.backgroundImage">
+											<div tn-cell-type="crop-image" style="width: 100%; height: 100%; background-position: center center;
+											background-repeat: no-repeat; background-size: cover;
+											background-image: url(nian02/bei2.png?x-oss-process=style/xm); 
+											animation-name: ent_pullDownIn; animation-duration: 1.5s; animation-timing-function: ease-in-out; animation-delay: 0s; 
+											animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: both;"
+											class="tn-cell tn-cell-crop-image tn-child-position-absolute tn-state-active ng-scope tn-animate-set tn-animate-started"
+											tn-link="cell.link" tn-animate="(!isCellBound ? &#39;__NOT_MOUNT__&#39; : cell.anim)" tn-animate-on-self="true"
+											tn-sound="cell.sound" tn-pre-load-image="cell.src" title="" tn-ra-cell="box.cubes:0.grounds:0.layers:0.comps:0.cimg1">
+												<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; vertical-align: middle; max-width: 100%;">
+													<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%; opacity: 0;" src="nian02/bei2.png">
+												</div>
+											</div>
+										</section>
+									</div>
+									<div class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose"
+									 tn-uuid="" tn-animate="(!isCompBound ? '__NOT_MOUNT__' : compAttr.anim)" style="width: 109.867%; position: absolute; left: -8.52917%; top: -0.707704%; height: 400.886px;"
+									 tn-ra-comp="box.cubes:0.pages:0.layers:0.comps:0">
+										<section class="tn-comp-pin tn-comp-style-pin" tn-link="compAttr.link || comp.link" tn-sound="compAttr.sound"
+										 tn-pre-load-image="compAttr.style.backgroundImage">
+											<div tn-cell-type="crop-image" style="width: 100%; height: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;
+							 background-image: url(nian02/fei.png?x-oss-process=style/xm); animation-name: emp_pulse; animation-duration: 2s; animation-timing-function: linear; animation-delay: 2s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: both;"
+											 class="tn-cell tn-cell-crop-image tn-child-position-absolute tn-state-active ng-scope tn-animate-set tn-animate-started"
+											 tn-link="cell.link" tn-animate="(!isCellBound ? '__NOT_MOUNT__' : cell.anim)" tn-animate-on-self="true"
+											 tn-sound="cell.sound" tn-pre-load-image="cell.src" title="" tn-ra-cell="box.cubes:0.pages:0.layers:0.comps:0.cimg1">
+												<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; vertical-align: middle; max-width: 100%;">
+													<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%; " src="nian02/fei.png?x-oss-process=style/xmwebp&quot;">
+												</div>
+											</div>
+										</section>
+									</div>
+									<div class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose"
+									 tn-uuid="" tn-animate="(!isCompBound ? '__NOT_MOUNT__' : compAttr.anim)" style="width: 50.4%; position: absolute; left: -2.93333%;  height: 108.37px;"
+									 tn-ra-comp="box.cubes:0.pages:0.layers:0.comps:1">
+										<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; 
+											vertical-align: middle; max-width: 100%;">
+											<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%; " src="nian02/liwinon.png?x-oss-process=style/xmwebp&quot;">
+										</div>
+									</div>
+									<div class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope tn-animate-set"
+									 tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? '__NOT_MOUNT__' : compAttr.anim)"
+									 style="width: 193.067%; position: absolute; left: -76.2667%; top: 58.6389%; height: 361.326px;" tn-ra-comp="box.cubes:0.pages:0.layers:0.comps:2">
+										<figure class="tn-animate-anchor tn-animate-started" style="animation-name: ent_moveInBottomNear; animation-duration: 1.5s; animation-timing-function: ease-in-out; animation-delay: 0s; animation-iteration-count: 1; animation-direction: normal; animation-fill-mode: both;">
+											<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; vertical-align: middle; max-width: 100%;">
+												<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%;" src="nian02/di.png?x-oss-process=style/xmwebp&quot;">
+											</div>
+										</figure>
+									</div>
+									<div class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope" tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose"
+									 tn-uuid="" tn-animate="(!isCompBound ? '__NOT_MOUNT__' : compAttr.anim)" style="position: absolute; left: 2.65%; top: 53.9937%; width: 92%;"
+									 tn-ra-comp="box.cubes:0.pages:0.layers:0.comps:4">
+										<section class="tn-comp-pin tn-comp-style-pin" tn-link="compAttr.link || comp.link" tn-sound="compAttr.sound"
+										 tn-pre-load-image="compAttr.style.backgroundImage" style="background-color: transparent;">
+											<div tn-cell-type="text" style="font-size: 150%; color: rgb(254, 225, 152); text-align: center;" class="tn-cell tn-cell-text tn-child-position-absolute horizontal-tb tn-state-active ng-scope tn-animate-set tn-animate-started"
+											 tn-link="cell.link" tn-animate="(!isCellBound ? '__NOT_MOUNT__' : cell.anim)" tn-animate-on-self="true"
+											 tn-sound="cell.sound" tn-yzk-font-usage-id="cell.style.tnYzkFontUsageId" title="" tn-ra-cell="box.cubes:0.pages:0.layers:0.comps:3.txt1">
+												<br>
+												<p>亲爱的 XXX :</p>
+											</div>
+											<div tn-cell-type="text" style="font-size: 87.5%; color: rgb(254, 225, 152); text-align: center; line-height: 2; letter-spacing: 1px; padding: 0px;"
+											 class="tn-cell tn-cell-text tn-child-position-absolute horizontal-tb tn-state-active ng-scope tn-animate-set tn-animate-started"
+											 tn-link="cell.link" tn-animate="(!isCellBound ? '__NOT_MOUNT__' : cell.anim)" tn-animate-on-self="true"
+											 tn-sound="cell.sound" tn-yzk-font-usage-id="cell.style.tnYzkFontUsageId" title="" tn-ra-cell="box.cubes:0.pages:0.layers:0.comps:4.txt1">
+												<p>今天是你加入锂威大家庭的第XX年<br>
+													从陌生到熟悉，从彷徨到笃定<br>
+													过去的点滴在脑海里回放<br>
+													那些我们携手拼搏的激情<br>
+													那些我们一起欢声笑语的快乐<br>
+													接下来的日子<br>
+													让我们携手并进<br>
+													一起成长，一起闪耀</p>
+											</div>
+										</section>
+									</div>
+									<div id="quan" class="tn-comp-top-level tn-comp-anim-pin tn-comp tn-from-house-booklet-cp ng-scope"
+									 tn-comp-pose="compConstraint.pose.tplPose || compAttr.pose" tn-uuid="" tn-animate="(!isCompBound ? '__NOT_MOUNT__' : compAttr.anim)"
+									 style="position: absolute; " tn-ra-comp="box.cubes:0.pages:0.layers:0.comps:5">
+										<section class="tn-comp-pin tn-comp-style-pin" tn-link="compAttr.link || comp.link" tn-sound="compAttr.sound"
+										 tn-pre-load-image="compAttr.style.backgroundImage" style="">
+											<div tn-cell-type="crop-image" style="width: 100%; height: 100%; background-position: center center; background-repeat: no-repeat; background-size: cover;
+							 background-image: url(nian02/zhuan.png?x-oss-process=style/xm); animation-name: emp_rollingCW; animation-duration: 5s; animation-timing-function: linear; animation-delay: 0.5s; animation-iteration-count: infinite; animation-direction: normal; animation-fill-mode: both;"
+											 class="tn-cell tn-cell-crop-image tn-child-position-absolute tn-state-active ng-scope tn-animate-set tn-animate-started"
+											 tn-link="cell.link" tn-animate="(!isCellBound ? '__NOT_MOUNT__' : cell.anim)" tn-animate-on-self="true"
+											 tn-sound="cell.sound" tn-pre-load-image="cell.src" title="" tn-ra-cell="box.cubes:0.pages:0.layers:0.comps:5.cimg1">
+												<div class="tn-crop-image-cover" style="height: 100%; overflow: hidden; line-height: 0; vertical-align: middle; max-width: 100%;">
+													<img class="tn-crop-image-cover-img" style="width: 100%; height: 100%; " src="nian02/zhuan.png?x-oss-process=style/xmwebp&quot;">
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<audio class="sound-item" src="nian02/ruzhi.mp3"></audio>
+
+		<section class="tn-scripts tn-last-block">
+			<script src="nian02/weixin.js"></script>
+			<script src="nian02/tpl.js"></script>
+			<script src="nian02/main.js"></script>
+		</section>
+		<script type="text/javascript">
+			window.addEventListener('load', function() {
+				var wl = document.body.clientWidth || document.documentElement.clientWidth;
+				wleft(wl);
+				var a = document.body.clientHeight || document.documentElement.clientHeight;
+				document.getElementById("zhuandi").style.height = (a * 1.0367) + "px";
+				window.addEventListener('resize', function() {
+					var wl = document.body.clientWidth || document.documentElement.clientWidth;
+					wleft(wl);
+					var a = document.body.clientHeight || document.documentElement.clientHeight;
+					document.getElementById("zhuandi").style.height = (a * 1.0367) + "px";
+				})
+			})
+
+			function wleft(wl) {
+				//alert(wl);
+				document.getElementById("quan").style.width = (wl * 0.53) + "px";
+				document.getElementById("quan").style.left = "23.5%";
+				document.getElementById("quan").style.top = "14.5%";
+				//document.getElementById("zhuandi").style.width ="110.133%";
+				//document.getElementById("zhuandi").style.left ="-4.53333%";
+				//document.getElementById("zhuandi").style.top ="-11.6664%";
+			}
+		</script>
+	</body>
+</html>
