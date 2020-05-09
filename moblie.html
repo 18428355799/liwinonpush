@@ -7,7 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<style>
 			.className {
-				-webkit-animation: twinkling 1000ms infinite ease-in-out 
+				-webkit-animation: twinkling 500ms infinite ease-in-out
 			}
 			.animated {
 				-webkit-animation-duration: 500ms;
@@ -17,7 +17,7 @@
 			}
 			@-webkit-keyframes twinkling {
 				100% {
-					opacity: 0.5;
+					opacity: 0;
 				}
 				0% {
 					opacity: 1;
@@ -25,7 +25,7 @@
 			}
 			@keyframes twinkling {
 				100% {
-					opacity: 0.5;
+					opacity: 0;
 				}
 				0% {
 					opacity: 1;
@@ -113,6 +113,7 @@
 									allEnd++;
 									if (allEnd === imgs.length) {
 										//console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
+										console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
 										//这个条件成立，说明所有的图片都运动完了，接下来才允许再次点击
 										//当所有运动完了以后，才允许再次点击
 										on = true;
@@ -137,6 +138,7 @@
 									allEnd++;
 									if (allEnd === imgs.length) {
 										//console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
+										console.log("allEnd:" + allEnd + ',imgs.length:' + imgs.length);
 										//这个条件成立，说明所有的图片都运动完了，接下来才允许再次点击
 										//当所有运动完了以后，才允许再次点击
 										on = true;
