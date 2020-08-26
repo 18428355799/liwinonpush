@@ -34,7 +34,7 @@ layui.form.on('submit(btnSubmit)', function(data) {
 			var divb = document.getElementById("nr")
 			divb.innerHTML = divb.innerText+res.jl;
 			layer.msg(res.msg, {
-				icon : 1,
+				icon : 1, 
 				time : 500
 			// 1秒关闭（如果不配置，默认是3秒）
 			});
