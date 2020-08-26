@@ -26,6 +26,7 @@ layui.form.on('submit(btnSubmit)', function(data) {
 			$('#choose').hide();//那么就显示题目
 			$('#information').hide();//就隐藏信息
 			$('#jl').show();//就隐藏信息
+			$('#sc').hide();//就隐藏信息
 			//$("tou").append(res.tou);
 			//$("nr").append(res.data);
 			var divA = document.getElementById("tou")
@@ -38,6 +39,16 @@ layui.form.on('submit(btnSubmit)', function(data) {
 			// 1秒关闭（如果不配置，默认是3秒）
 			});
 			echartsfun(res);
+		}if(res.count==201){
+			$('#choose').hide();//那么就显示题目
+			$('#information').hide();//就隐藏信息
+			$('#jl').hide();//就隐藏信息
+			$('#sc').show();//就隐藏信息
+			layer.msg(res.msg, {
+				icon : 1,
+				time : 500
+			// 1秒关闭（如果不配置，默认是3秒）
+			});
 		} else {
 			layer.msg(res.msg, {
 				icon : 2,
@@ -91,6 +102,7 @@ $("#start").click(function() {
 	$('#choose').show();//那么就显示题目
 	$('#information').hide();//就隐藏信息
 	$('#jl').hide();//就隐藏信息
+	$('#sc').hide();//就隐藏信息
 	$("#name").val(namea);
 	$("#phone").val(phonea);
 	$("#school").val(schoola);
@@ -125,12 +137,12 @@ function echartsfun(json){
 	        },
 	        indicator: [
 	            { text: '内倾（I）', max: 21},
-	            { text: '外倾（E）', max: 21},
 	            { text: '感觉（S）', max: 26},
-	            { text: '直觉（N）', max: 26},
 	            { text: '思考（T）', max: 24},
+				{ text: '知觉（P）', max: 22},
+	            { text: '外倾（E）', max: 21},
+				{ text: '直觉（N）', max: 26},
 	            { text: '情感（F）', max: 24},
-	            { text: '知觉（P）', max: 22},
 	            { text: '判断（J）', max: 22}
 	        ],
 			center: ["50%", "50%"],
