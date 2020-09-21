@@ -108,6 +108,8 @@ $("#start").click(function() {
 	$("#school").val(schoola);
 	$("#age").val(agea);
 	$("#sex").val(sexa);
+	//开始计时
+	time();
 	/* layer.msg("温馨提示：问卷用于揭示你是如何看待事物以及如何做决定的，答案无好坏之分，问卷结果有助于你了解自己的职业倾向、个性特征、人际相处的特征。请仔细阅读每一个问题，答案直接写在题目上面。不必对问题想的太多，根据第一感觉回答即可。", {
 	  icon: 6,
 	  time: 5000,
@@ -115,7 +117,44 @@ $("#start").click(function() {
 	  //time();
 });
 
-function echartsfun(json){
+var ti="";
+
+//倒计时计时
+function time(){
+	//获取第一时间做题的毫秒数
+	ti=getTime();
+	var countdown=document.getElementById("time");
+    var time=10*60;//30分钟换算成1800秒
+    setInterval(function(){
+		var timeb=getTime();
+		timeb = timeb-ti;
+		time=600-parseInt(timeb/1000);
+    	if(time>0){
+	    	if(time==3*60){
+	    		layer.msg("还有5分钟作答时间", {
+	    			icon: 1,
+	    			time: 1000});
+	    	}
+	       time=time-1;
+	       var minute=parseInt(time/60);
+	       var second=parseInt(time%60);
+	       countdown.innerHTML=minute+'分'+second+'秒';
+    	}else{
+    		layer.msg("作答时间已到，需要重新答题，谢谢配合！", {
+    			icon: 1,
+    			time: 1000,
+			});
+			setTimeout(function() {
+				// 1.5秒后实现的方法写在这个方法里面 延时刷新
+				location.reload();
+			}, 1000);	
+    	}
+    },1000);
+}
+function getTime(){
+	return Date.now();
+}
+/* function echartsfun(json){
 	// 基于准备好的容器(这里的容器是id为chart1的div)，初始化echarts实例
 	var myChart = echarts.init(document.getElementById('main'));
 	option = {
@@ -159,7 +198,7 @@ function echartsfun(json){
 	};
 	// 使用刚指定的配置项和数据显示图表
 	myChart.setOption(option);
-}
+} */
 function gonghaoid(){
 	phonea=$('#phonea').val();
 	if(phonea==""||phonea==null||phonea==undefined){

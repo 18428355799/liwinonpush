@@ -29,6 +29,13 @@
 .danxuanb{
 	margin-left:10px;
 }
+.nava{
+	position:fixed; 
+	top:0; 
+	width:90%; 
+	height: 30px; 
+	
+}
 </style>
 <body>
 <div id="information" style="width: 95%;">
@@ -54,7 +61,7 @@
 		<div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md4">
 		    <label class="layui-form-label">年龄:</label>
 		    <div class="layui-input-block ">
-		        <select name="agea" id="agea" lay-verify="agea" lay-search="">
+		        <select name="agea" id="agea" lay-verify="agea">
 				  <option value="">请选择年龄</option>
 				  <option value="18">18</option>
 				  <option value="19">19</option>
@@ -98,6 +105,9 @@
     </div>
 </div>
 <div id="choose" class="containera layui-col-xs12">
+	<div id="nav" class="nava" style="padding-top: 15px; padding-left: 30px;text-align: right;">  <!-- 顶部倒计时 -->
+		<label>倒计时:&nbsp&nbsp</label><label id="time" style="color:red"></label></br>
+	</div>
 	<form id="editForm" class="layui-form" action="" style="margin-left: -60px;">
 		<fieldset class="layui-elem-field layui-field-title" style="margin-left: 45px;margin-bottom: 15px;">
 				<legend style="font-size: 18px;">一:哪一答案最接近地描述了你通常的思考和行为方式</legend>
@@ -781,7 +791,7 @@
 	<div class="layui-field-box" id="nr" style="font-size: initial;margin-left: 20px;">
 		&emsp; &emsp;  
 	</div>
-	<div id="main" style="height:300px;margin-top: 35px;text-align: center;"></div>
+	<!-- <div id="main" style="height:300px;margin-top: 35px;text-align: center;"></div> -->
 </div>
 <div id="sc" style="text-align: center;padding-top: 30%">
     谢谢配合调查<br/>祝你生活愉快
@@ -789,16 +799,16 @@
 <!--   Core JS Files   -->
 <script src="https://mesqrcode.liwinon.com/js/jquery-3.4.0.min.js" type="text/javascript"></script>
 <script src="https://mesqrcode.liwinon.com/layui/layui.all.js" type="text/javascript"></script>
-<script src="https://mesqrcode.liwinon.com/js/echarts/echarts.min4.js" type="text/javascript"></script>
+<!-- <script src="https://mesqrcode.liwinon.com/js/echarts/echarts.min4.js" type="text/javascript"></script> -->
 <script type="text/javascript">
 	$('#information').show();//那么就显示信息
 	$('#choose').hide(); //就隐藏题目
 	$('#jl').hide(); //就隐藏题目
 	$('#sc').hide(); //就隐藏题目
 </script>
-<!-- <script src="https://mesqrcode.liwinon.com/hr/thinkingbehavior.js"></script> -->
-<script type="text/javascript">
+<script src="thinkingbehavior.js"></script>
+<!-- <script type="text/javascript">
     document.write('<script src="https://mesqrcode.liwinon.com/hr/thinkingbehavior.js?random='+Math.random()+'"><\/script>');
-</script>
+</script> -->
 </body>
 </html>
