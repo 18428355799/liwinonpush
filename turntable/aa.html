@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>liwinon锂威</title>
+    <link rel="stylesheet" href="https://mesqrcode.liwinon.com/js/reward/css/typo/typo.css">
+    <link rel="stylesheet" href="https://mesqrcode.liwinon.com/js/reward/css/GB-canvas-turntable.css">
+    <link rel="stylesheet" href="https://mesqrcode.liwinon.com/js/reward/index.css">
+    <link rel="stylesheet" href="https://mesqrcode.liwinon.com/layui/css/layui.css" >
+</head>
+<body ontouchstart>
+<div class="wrapper typo" id="wrapper">
+    <section id="turntable" class="gb-turntable">
+        <div class="gb-turntable-container">
+            <canvas class="gb-turntable-canvas" width="300" height="300px">抱歉！浏览器不支持。</canvas>
+        </div>
+        <a id="bat" class="gb-turntable-btn" href="javascript:;">抽奖</a>
+    </section>
+</div>
+<div id="name" style="padding-top: 10%;">
+    <h2 style="text-align: center;">你已经抽取过奖品啦</h2>
+    <div class="box">
+        <img id="imgId" src="https://mesqrcode.liwinon.com/js/reward/images/xiexie.png" class="img"/>
+    </div>
+    <h2 style="text-align: center;padding-top: 5%;" id="prize"></h2>
+</div>
+<div class="layui-carousel" id="test1" style="font-size: 20px;color: #F44336;margin-top: 20px;">
+    <h2 style="text-align: center;">中奖名单</h2>
+    <div carousel-item id="lunbo">
+    </div>
+</div>
+<div class="container" style="width: 100%;">
+    技术支持锂威信息部
+</div>
+<script type="text/javascript" src="https://mesqrcode.liwinon.com/js/reward/js/GB-canvas-turntable.js"></script>
+<script src="https://mesqrcode.liwinon.com/js/jquery-3.4.0.min.js" type="text/javascript"  charset="utf-8"></script>
+<script src="https://mesqrcode.liwinon.com/layui/layui.all.js" type="text/javascript"  charset="utf-8"></script>
+<!--<script th:inline="javascript">
+    var userid = [[${userid}]];  //qywxid
+    var start = [[${start}]];    //有没有抽奖
+    var prize = [[${prize}]];    //抽中的奖品
+    var prizepath = [[${prizepath}]];    //奖品url
+</script>-->
+<!--<script type="text/javascript" src="../../js/reward/reward.js"></script>-->
+<script>
+$(function() {
+    var start =0;    //有没有抽奖
+   /* var userid = '';  //qywxid
+    var prize = '';   //抽中的奖品
+    var prizepath = '';   //奖品url
+    $.ajax({  //厂区
+        async : false,
+        type : "GET",
+        url : "/assets/reward/getuserprize",
+        success:function(res) {
+            userid = res.data.userid;
+            start = res.data.start;
+            prize = res.data.prize;
+            prizepath = res.data.prizepath;
+        }
+    }); */
+    if(start == 1){  //1 == 抽了奖  wrapper  隐藏
+         $("#wrapper").attr("style","display:none;");//隐藏div
+         $("#prize").append("抽中奖品："+prize);
+         $("#imgId").attr('src',prizepath);
+    }else{
+        var count = 5;
+        /* $.ajax({  //厂区
+             async : false,
+             type : "GET",
+             url : "/assets/reward/getresult?type=20201026&userid="+userid,
+             success:function(data) {
+                 count = data.data;
+             }
+         }); */
+        $("#name").attr("style","display:none;");//隐藏div
+		gbTurntable.init({
+			id: 'turntable',
+			config: function(callback) {
+				// 获取奖品信息
+				callback && callback([{
+					text: '四等奖(高级保温杯)',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/shuibei.png'
+				}, {
+					text: '谢谢参与',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/xiexie.png'
+				}, {
+					text: '一等奖(500元)',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/500.png'
+				}, {
+					text: '谢谢参与',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/xiexie.png'
+				}, {
+					text: '二等奖(200元)',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/200.png'
+				}, {
+					text: '谢谢参与',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/xiexie.png'
+				}, {
+					text: '三等奖(100元)',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/100.png'
+				}, {
+					text: '五等奖(高级雨伞)',
+					img: 'https://mesqrcode.liwinon.com/js/reward/images/yushan.png'
+				}])
+			},
+			getPrize: function(callback) {
+				// 获取中奖信息
+				var num = Math.random() * -1>>> 0, //奖品ID
+				chances = num; // 可抽奖次数
+				//获取抽奖的结果
+				var numcount = count;
+				callback && callback([numcount, chances]);
+			},
+			gotBack: function(data) {
+				alert('恭喜抽中: ' + data);
+			}
+		});
+    }
+     
+   /* $.ajax({ 
+        async : false,
+        type : "GET",
+        url : "/assets/reward/information",
+        success : function(res) {
+            data = res.data;
+            if(data.length > 0){
+                var  hh = '<br />';
+                var  s = '<div style="text-align: center;">';
+                var  w = '</div>';
+                var option =  s;
+                for (var i = 0; i < data.length; i++) {
+                    if ( i%5 == 0 && i > 0 ) {
+                        option += data[i].userid+':'+data[i].prize+w+s;
+                    } else {
+                        option += data[i].userid+':'+data[i].prize+hh;
+                    }
+                }
+                $("#lunbo").append(option+w);
+            }else{
+             $("#lunbo").append( '<div style="text-align: center;">快来抽奖哦，神秘大礼等着你</div>');
+            }
+        }
+    }); */
+    layui.use('carousel', function(){
+           var carousel = layui.carousel;
+           //建造实例
+           carousel.render({
+             elem: '#test1'
+             ,width: '100%' //设置容器宽度
+             ,arrow: 'none' //始终显示箭头
+             ,anim: 'updown' //切换动画方式
+             ,interval: 2000 //切换时间
+             ,indicator: 'none' //切换时间
+           });
+    });
+});  
+</script>
+</body>
+</html>
+<!-- <pre>
+gbTurntable.init({
+    id: 'turntable',
+    config: function(callback){
+        // 获取奖品信息
+        // 奖项 text 属性不能为空，用于显示或抽中奖品提示
+        // img 为奖品图片地址，如果不为空则转盘奖品按图片方式显示
+         callback && callback([{ text: '1元红包', img: 'images/redpacket.png' }, 
+		 { text: '2元红包' }, { text: '3元红包' }, { text: '显示器',
+        img: 'images/display.png' }, { text: '5元红宝' }, { text: '6元红宝' }])
+    },
+    getPrize: function(callback) {
+        // 获取中奖信息
+        var num = Math.random() * 6 >>> 0,   //奖品ID
+            chances = num;  // 可抽奖次数
+            callback && callback([num, chances]);
+    },
+    gotBack: function(data) {
+        alert('恭喜抽中' + data);
+    }
+});
+</pre>
+ -->

@@ -1,0 +1,46 @@
+.wrapper {
+	padding: 20px 40px;
+}
+
+.fork-github {
+	position: fixed;
+	right: -100px;
+	top: 45px;
+	z-index: 9999;
+	padding: 2px 100px;
+	font-size: 12px;
+	background-color: #444;
+	border: 1px solid #000;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	text-align: center;
+}
+
+.fork-github a {
+	color: #fff;
+}
+
+.gb-turntable a.gb-turntable-btn {
+	border: none;
+}
+
+.container {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	background: #9e9e9ea1;
+}
+.box{
+	max-width: 200px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	border: 1px solid black;
+}
+.img{
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}

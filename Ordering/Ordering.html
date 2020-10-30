@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Liwinon锂威</title>
+		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+		<meta name="viewport" content="width=device-width"/>
+		<!--     Fonts and icons     -->
+		<link href="https://mesqrcode.liwinon.com/layui/css/layui.css" rel="stylesheet">
+	</head>
+	<body>
+		<input  value="" id="inputs"  />
+		<input  value="" id="input2"  />
+		<script src="https://mesqrcode.liwinon.com/js/jquery-3.4.0.min.js" type="text/javascript"></script>
+		<script src="https://mesqrcode.liwinon.com/layui/layui.all.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			/* $("#inputs").bind('input propertychange',function(e){
+			    console.log($(this).val())
+			}) */
+			$("#inputs").bind('input propertychange', function () {
+			    var barCode1= $(this).val();
+			    setTimeout(function(){
+					$("#input2").focus();
+			    }, 200);
+		    })
+			$("#input2").bind('input propertychange', function () {
+			    var barCode2= $(this).val();
+				var curValue = $("#inputs").val();
+					alert(11);
+			 })
+		   /* $('#inputs').blur(function () {
+				var curValue = $("#inputs").val();
+				alert(curValue);
+			}); */
+		</script>
+	</body>
+</html>

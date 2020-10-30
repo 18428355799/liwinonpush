@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>Drawing sector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<style>
+	#turntable{
+		position: relative;
+	}
+	#canvas{
+		-webkit-transform: all 6s ease;
+		transition: all 6s ease;
+	}
+	#btn{
+		position: absolute;
+		left: 140px;
+		top: 120px;
+		width: 60px;
+		border-radius: 50%;
+		background-color: #fff;
+		line-height: 60px;
+		text-align: center;
+	}
+	#btn:after{
+		position: absolute;
+		display: block;
+		content: '';
+		left: 10px;
+		top: -32px;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		border-width: 20px;
+		border-style: solid;
+		border-color: transparent;
+		border-bottom-color: #fff; 
+	}
+</style>
+</head>
+<body>
+	<div style="text-align: center;">
+		<div id="turntable" style="width: auto;">
+			<canvas id="canvas" width="300" height="300">抱歉！浏览器不支持抽奖活动。</canvas>
+			<a id="btn" style="text-align: center;" href="javascript:;">抽奖</a>
+		</div>
+	</div>
+	<script>
+		window.addEventListener('load', function(){
+			var num = 8;   // 奖品数量
+			var mycars=new Array("一等奖","谢谢参与","二等奖","谢谢参与","三等奖","谢谢参与","四等奖","五等奖")
+			if (num % 2 !== 0){
+				alert('请配置偶数奖项');
+			}
+			var canvas = document.getElementById('canvas');
+			var btn = document.getElementById('btn');
+			if(!canvas.getContext){
+				alert('抱歉！浏览器不支持抽奖活动。');
+				return;
+			}
+			// 获取绘图上下文
+			var ctx = canvas.getContext('2d');
+			for (var i = 0; i < 8; i++) {
+				// 保存当前状态
+				ctx.save();
+				// 开始一条新路径
+				ctx.beginPath();
+				// 位移到圆心，下面需要围绕圆心旋转
+				ctx.translate(150, 150);
+				// 从(0, 0)坐标开始定义一条新的子路径
+				ctx.moveTo(0, 0);
+				// 旋转弧度,需将角度转换为弧度,使用 degrees * Math.PI/180 公式进行计算。
+				ctx.rotate((360 / num * i + 360 / num / 2) * Math.PI/180);
+				// 绘制圆弧
+				ctx.arc(0, 0, 150, 0,  2 * Math.PI / num, false);
+				if (i % 2 == 0) {
+		    		ctx.fillStyle = '#ffb820';
+			    }else{
+			    	ctx.fillStyle = '#ffcb3f';
+			    }
+				// 填充扇形
+				ctx.fill();
+				// 绘制边框
+				ctx.lineWidth = 0.5;
+				ctx.strokeStyle = '#f48d24';
+			    ctx.stroke();
+
+			    // 文字
+			    ctx.fillStyle = '#fff';
+			    ctx.font="14px sans-serif";
+			    ctx.fillText(mycars[i], 60, 30);
+
+			    // 恢复前一个状态
+			    ctx.restore();
+			}
+
+			// 抽奖   360deg这个是度数，看旋转哪里就   
+			btn.onclick = function(){
+				canvas.style.transform = 'rotate(2012deg)';	
+				
+			}
+		}, false);
+	</script>
+</body>
+</html>

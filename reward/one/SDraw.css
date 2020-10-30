@@ -1,0 +1,177 @@
+@charset "utf-8";
+/* CSS Document */
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;font-weight:normal;}
+[hidefocus],summary{outline:0;}
+ol,ul,li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;font-weight:normal;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;content:'';}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+.clearfix:after{content:'\20';display:block;height:0;clear:both}
+.clearfix{zoom:1}
+
+    .g-content {
+      width: 100%;
+      background: #fbe3cc;
+      height: auto;
+      font-family: "微软雅黑", "microsoft yahei";
+    }
+
+    .g-content .g-lottery-case {
+      width: 5rem;
+      height: 5.5rem;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .g-content .g-lottery-case .g-left h2 {
+      font-size: 0.2rem;
+      line-height: 0.32rem;
+      font-weight: normal;
+      margin-left: 0.2rem;
+    }
+
+    .g-content .g-lottery-case .g-left {
+      width: 4.5rem;
+    }
+
+    .g-lottery-box {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-left: .3rem;
+      position: relative;
+      background: url(../images/ly-plate-c.gif) no-repeat;
+      background-size: 100% 100%;
+    }
+
+    .g-lottery-box .g-lottery-img {
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+      background: url(../images/bg-lottery.png) no-repeat;
+      background-size: 100% 100%;
+      left: .26rem;
+      top: .26rem;
+    }
+
+    .g-lottery-box .playbtn {
+      width: 1.87rem;
+      height: 1.87rem;
+      position: absolute;
+      top: 1.05rem;
+      left: 1.05rem;
+      background: url(../images/playbtn.png) no-repeat;
+      background-size: 100% 100%;
+    }
+
+
+    /*******中奖弹框页面*******/
+    .zj-main {
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      background-size: 100% 100%;
+      position: absolute;
+      overflow: hidden;
+      *zoom: 1;
+      z-index: 10;
+      left: center;
+      top: 0;
+    }
+
+    .zj-main .txzl {
+      width: 90%;
+      height: auto;
+      position: absolute;
+      top: 28%;
+      left: 5%;
+      background: #fff;
+      padding-top:.3rem;
+    }
+
+    .txzl h2 {
+      font-size: .32rem;
+      font-weight: bold;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      color: #e32d2c;
+      line-height: 140%;
+      text-align: center;
+    }
+
+    .txzl p {
+      font-size: .26rem;
+      width: 90%;
+      height: auto;
+      margin: 1% auto 0 auto;
+      color: #232323;
+      line-height: 150%;
+      text-align: center;
+    }
+
+    .txzl label {
+      width: 90%;
+      height: auto;
+      margin: 3% auto 0 auto;
+      font-size: .26rem;
+      color: #232323;
+      display: block;
+      text-align: center;
+    }
+
+    .txzl label input {
+      height: auto;
+      font-size: .26rem;
+      border: none;
+      line-height: 180%;
+      border: 1px solid #ddd;
+    }
+
+    .txzl h4 {
+      font-size: .26rem;
+      font-weight: bold;
+      width: 100%;
+      height: auto;
+      margin: 3% auto 0 auto;
+      color: #e32d2c;
+      line-height: 140%;
+      text-align: center;
+    }
+
+    .txzl .info_tj {
+      width: 50%;
+      height: .6rem;
+      font-size: .3rem;
+      line-height: .6rem;
+      color: #ffffff;
+      text-align: center;
+      background: #ad0004;
+      -webkit-border-radius: .1rem;
+      -moz-border-radius: .1rem;
+      border-radius: .1rem;
+      margin: 4% auto 6% auto
+    }
+
+    .zj-main .close_zj {
+      width: 31px;
+      height: 31px;
+      position: absolute;
+      top: 27%;
+      right: 3.5%;
+    }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>抽奖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="SDraw.css">
+</head>
+
+<body>
+  <div class="g-content">
+    <div class="g-lottery-case">
+      <div class="g-left">
+        <h2>您已拥有<span class="playnum"></span>次抽奖机会，点击立刻抽奖！~</h2>
+        <div class="g-lottery-box">
+          <div class="g-lottery-img">
+            <a class="playbtn" href="javascript:;" title="开始抽奖"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-------------中奖弹窗页面-------------->
+  <div class="zj-main" id="zj-main" style="display: none;">
+    <form class="txzl">
+      <h2>恭喜抽中<br /><span id="jiangpin"></span></h2>
+      <p>请填写资料领取奖品：</p>
+      <label>姓名：<input type="text" name="username" id="name" /></label>
+      <label>电话：<input type="text" name="userphone" maxlength="11" id="phone" /></label>
+      <label>地址：<input type="text" name="useraddress" id="address" /></label>
+      <h4><sub>*</sub>未提交个人资料将视为放弃领取此次奖品</h4>
+      <div class="info_tj">提交领奖</div>
+    </form>
+    <div class="close_zj"><img src="./images/close_1.png" /></div>
+  </div>
+
+  <script src="./js/rem.js"></script>
+ <script src="https://mesqrcode.liwinon.com/js/jquery-3.4.0.min.js" type="text/javascript"></script>
+  <script src="./js/jquery.rotate.min.js" type="text/javascript"></script>
+  <script src="index.js"></script>
+ 
+</body>
+</html>
