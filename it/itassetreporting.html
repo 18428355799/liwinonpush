@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>liwinon锂威</title>
+		<link rel="stylesheet" href="https://mesqrcode.liwinon.com/layui/css/layui.css" >
+	</head>
+	<body>
+		<fieldset class="layui-elem-field layui-field-title"
+		          style="margin-top: 3%">
+		    <legend>《锂威IT资产填写统计》</legend>
+		</fieldset>
+		<form class="layui-form  layui-form-pane" style="padding-left: 30px; padding-right: 30px;">
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">工号:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="personid" id="personid" placeholder="请输入工号"
+		                   class="layui-input"  onchange="myFunction()">
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">姓名:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="name" id="name" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">部门:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="department" id="department" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">资产编号:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="itnumber" id="itnumber" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">电脑品牌:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="brand" id="brand" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">类型:</label>
+		        <div class="layui-input-block">
+		            <!-- <input type="radio" name="type" value="台式机" title="台式机">
+		            <input type="radio" name="type" value="笔记本" title="笔记本" checked> -->
+		           <select name="type" id="type" >
+		                <option value="台式机">台式机</option>
+		                <option value="笔记本">笔记本</option>
+						<option value="绘图电脑">绘图电脑</option>
+		            </select>
+		        </div>
+		    </div>
+		    <div class="layui-form-item layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">资产位置:</label>
+		        <div class="layui-input-block ">
+		            <input type="text" name="area" id="area" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item  layui-col-xs12 layui-col-sm12 layui-col-md12">
+		        <label class="layui-form-label">备注:</label>
+		        <div class="layui-input-block">
+		            <input type="text" name="remark" id="remark" class="layui-input">
+		        </div>
+		    </div>
+		    <div class="layui-form-item" style="text-align: center;  margin-top: 20px">
+		            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+		            <button class="layui-btn" lay-submit lay-filter="btnSubmit">提交</button>
+		    </div>
+		</form>
+	</body>
+	<script type="text/javascript" src="https://mesqrcode.liwinon.com/mainApp/js/jquery-3.4.0.min.js"></script>
+	<script src="https://mesqrcode.liwinon.com/layui/layui.all.js" type="text/javascript"  charset="utf-8"></script>
+	<script type="text/javascript" src="https://mesqrcode.liwinon.com/assets/js/itassetreporting.js"></script>
+</html>
